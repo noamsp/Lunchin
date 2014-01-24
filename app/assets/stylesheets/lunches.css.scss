@@ -1,3 +1,58 @@
-// Place all the styles related to the Lunches controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 {
+  text-align: center;
+}
+.lunches {
+  overflow: auto;
+  width: auto;
+  padding: 20px 20px 0; // padding-bottom is created by margin on .lunch
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  background: #ededed;
+}
+.lunch {
+  position: relative;
+  float: left;
+  height: 100%; width: 23.5%; // adjust for margin
+  margin-right: 2%;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  text-align: center;
+  &:nth-of-type(4n + 4) { margin-right: 0; } // every 4th child no margin
+  .info {
+    display: inline-block;
+    padding: 10px;
+    border: solid 1px #222;
+    border-radius: 100px;
+    .creator {
+
+    }
+    .restaurant {
+
+    }
+  }
+  .users {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    .user {
+      position: absolute;
+      width: 30%;
+      &:nth-of-type(1){
+        top: 0; left : 0;
+      }
+      &:nth-of-type(2){
+        top: 0; left : 70%;
+      }
+      &:nth-of-type(3){
+        bottom: 0; left : 70%;
+      }
+      &:nth-of-type(4){
+        bottom: 0; left : 0;
+      }
+    }
+  }
+  .btn-join {
+    display: block;
+    margin: 10px auto 0;
+  }
+}
