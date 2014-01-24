@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140124122641) do
+ActiveRecord::Schema.define(:version => 20140124125339) do
+
+  create_table "lunches", :force => true do |t|
+    t.string   "where"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.time     "when"
+  end
+
+  add_index "lunches", ["where"], :name => "index_lunches_on_where"
 
   create_table "users", :force => true do |t|
     t.string   "provider"

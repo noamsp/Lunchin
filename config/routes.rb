@@ -1,4 +1,7 @@
 Lunchin2::Application.routes.draw do
+  resources :lunches
+
+
   get "lunches/home"
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
