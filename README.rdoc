@@ -1,3 +1,6 @@
+#alon - http://railsapps.github.io/openssl-certificate-verify-failed.html 
+# to solve SSL issue 
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
