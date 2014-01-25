@@ -1,4 +1,6 @@
 Lunchin2::Application.routes.draw do
+  root :to => 'lunches#index'
+
   resources :lunches
 
 

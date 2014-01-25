@@ -8,6 +8,7 @@
       <span class="when"><%= lunch.when %></span>
       <span class="creator">Alon Porat</span>
       <%= link_to 'Edit', edit_lunch_path(lunch) %>
+      <%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
     <div class="users">
       <div class="user">David Tintner</div>

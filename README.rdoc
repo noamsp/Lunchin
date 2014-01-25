@@ -1,2 +1,5 @@
 == LunchIn
 Lets get lunch
+
+#alon - http://railsapps.github.io/openssl-certificate-verify-failed.html 
+# to solve SSL issue 
