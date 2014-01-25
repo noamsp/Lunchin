@@ -1,24 +1,24 @@
-<h1>Listing lunches</h1>
+<h1>Today's lunches</h1>
 
-<table>
-  <tr>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="lunches">
 <% @lunches.each do |lunch| %>
-  <tr>
-    <td><%= lunch.where %></td>
-    <td><%= lunch.when %></td>
-    <td><%= link_to 'Show', lunch %></td>
-    <td><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
-    <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+  <div class="lunch">
+    <div class="info">
+      <h2 class="restaurant"><%= lunch.where %></h2>
+      <span class="when"><%= lunch.when %></span>
+      <span class="creator">Alon Porat</span>
+      <%= link_to 'Edit', edit_lunch_path(lunch) %>
+    </div>
+    <div class="users">
+      <div class="user">David Tintner</div>
+      <div class="user">Noam Schwartz</div>
+      <div class="user">Tal Perry</div>
+      <div class="user">Ilan Bar Magen</div>
+    </div>
+    <button type="button" class="btn-join">Join Lunch</button>
+  </div>
 <% end %>
-</table>
 
-<br />
+</div>
 
 <%= link_to 'New Lunch', new_lunch_path %>
