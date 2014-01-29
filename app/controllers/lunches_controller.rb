@@ -1,6 +1,7 @@
 class LunchesController < ApplicationController
   # GET /lunches
   # GET /lunches.json
+  
   def index
     @lunches = Lunch.all
 
@@ -20,6 +21,14 @@ class LunchesController < ApplicationController
       format.json { render json: @lunch }
     end
   end
+
+  def join
+    @lunch = Lunch.find(params[:id])
+    @lunch.users << current_user
+
+    redirect_to root_path
+  end
+
 
   # GET /lunches/new
   # GET /lunches/new.json

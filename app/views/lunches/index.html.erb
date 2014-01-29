@@ -13,7 +13,7 @@
     <td><%= lunch.where %></td>
     <td><%= lunch.when %></td>
     <td><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
-    <td><%= link_to 'Destroy', lunch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %></td>
   </tr>
 <% end %>
 </table>
