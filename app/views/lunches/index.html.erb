@@ -1,39 +1,20 @@
-<h1>Listing lunches</h1>
+<h1>Today's lunches</h1>
 
-<table>
-  <tr>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
+<div class="lunches">
 <% @lunches.each do |lunch| %>
-  <tr>
-    <td><%= lunch.where %></td>
-    <td><%= lunch.when %></td>
-
-    <td>
+  <div class="lunch">
+    <div class="info">
+      <h2 class="restaurant"><%= lunch.where %></h2>
+      <span class="when"><%= lunch.when %></span>
+      <%= link_to 'Edit', edit_lunch_path(lunch) %>
+      <%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
+    </div>
+    <div class="users">
       <% lunch.users.each do |user| %>
-
-            <%= user.name %>
-
+         <div class="user"><%= user.name %></div>
       <% end %>
-    </td>
-
-    <td><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
-
-    <td>
-    <%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %></td>
-
-      </tr>
+    </div>
+  </div>
 <% end %>
-</table>
-
-<br />
-
+</div>
 <%= link_to 'New Lunch', new_lunch_path %>
-
-
