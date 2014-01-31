@@ -1,8 +1,6 @@
 class Lunch < ActiveRecord::Base
   attr_accessible :where ,:when
 
-  has_many  :lunchusers
-  has_many  :users, :through => :lunchusers
-
+  has_and_belongs_to_many :users
 
 end
