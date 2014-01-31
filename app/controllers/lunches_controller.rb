@@ -51,6 +51,11 @@ class LunchesController < ApplicationController
   def create
     @lunch = Lunch.new(params[:lunch])
 
+
+    @lunch.users << current_user
+
+
+
     respond_to do |format|
       if @lunch.save
         format.html { redirect_to lunches_url, notice: 'Lunch was successfully created.' }

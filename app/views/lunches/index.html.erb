@@ -10,11 +10,11 @@
       <%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
     </div>
     <div class="users">
-
+      <% lunch.users.each do |user| %>
+         <div class="user"><%= user.name %></div>
+      <% end %>
     </div>
   </div>
 <% end %>
-
 </div>
-
 <%= link_to 'New Lunch', new_lunch_path %>
