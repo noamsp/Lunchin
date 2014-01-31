@@ -2,24 +2,20 @@
 <html>
 <head>
   <title>Lunchin2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
+    <header id="user-widget">
+        <% if current_user %>
+          <strong><%= current_user.name %></strong>
           <img src="http://graph.facebook.com/<%=current_user.uid%>/picture?type=square" />
           <%# type can be small, square, large, normal %>
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-
-  <% end %>
-</div>
-
+          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+        <% else %>
+          <%= link_to "Sign in", "/auth/facebook", id: "sign_in" %>
+        <% end %>
+    </header>
 <%= yield %>
-
 </body>
 </html>

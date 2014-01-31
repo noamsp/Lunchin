@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  padding: 0; //Todo remove after add in a reset style sheet
+}
+header {
+  background-color: #222;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: right;
+}
+
 h1 {
   text-align: center;
 }
