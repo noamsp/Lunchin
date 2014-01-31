@@ -6,9 +6,6 @@
     <div class="info">
       <h2 class="restaurant"><%= lunch.where %></h2>
       <span class="when"><%= lunch.when %></span>
-<!--
-      <span class="creator">Alon Porat</span>
--->
       <%= link_to 'Edit', edit_lunch_path(lunch) %>
       <%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
     </div>
