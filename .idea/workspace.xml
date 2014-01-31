@@ -19,10 +19,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="DELETED" beforePath="C:\projects\Lunchin\public\index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lunches/index.html.erb" afterPath="$PROJECT_DIR$/app/views/lunches/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="Lunchin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,10 +54,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.65580183" vertical-offset="113" max-vertical-offset="1012">
+            <state line="28" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1012">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="7" selection-start="438" selection-end="438" vertical-scroll-proportion="0.4589309" vertical-offset="0" max-vertical-offset="767">
               <folding />
             </state>
           </provider>
@@ -119,6 +125,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/lunches/index.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -907,7 +914,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.65580183" vertical-offset="113" max-vertical-offset="1012">
+        <state line="28" column="0" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0" vertical-offset="113" max-vertical-offset="1012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="7" selection-start="438" selection-end="438" vertical-scroll-proportion="0.4589309" vertical-offset="0" max-vertical-offset="767">
           <folding />
         </state>
       </provider>
