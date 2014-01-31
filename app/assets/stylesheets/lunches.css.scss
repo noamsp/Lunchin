@@ -19,6 +19,8 @@ h1 {
   text-align: center;
   &:nth-of-type(4n + 4) { margin-right: 0; } // every 4th child no margin
   .info {
+    position: relative;
+    z-index: 2; // buttons need to be above .users
     display: inline-block;
     padding: 10px;
     border: solid 1px #222;
