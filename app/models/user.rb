@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :oauth_expires_at, :oauth_token, :provider, :uid
+  attr_accessible :name, :image, :oauth_expires_at, :oauth_token, :provider, :uid
 
   has_and_belongs_to_many :lunches
 
@@ -16,5 +16,11 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.save!
     end
+  end
+end
+
+class Image < ActiveRecord::Base
+  def user_image_path
+    "http://graph.facebook.com/#{uid}/picture?type=square"
   end
 end

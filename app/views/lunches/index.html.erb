@@ -11,7 +11,9 @@
     </div>
     <div class="users">
       <% lunch.users.each do |user| %>
-         <div class="user"><%= user.name %></div>
+         <div class="user" style="background-image: url(http://graph.facebook.com/<%=user.uid%>/picture?type=square);">
+           <span class="name"><%= user.name %></span>
+         </div>
       <% end %>
     </div>
   </div>
