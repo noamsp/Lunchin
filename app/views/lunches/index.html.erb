@@ -6,12 +6,18 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @lunches.each do |lunch| %>
   <tr>
     <td><%= lunch.where %></td>
     <td><%= lunch.when %></td>
+
+
+
+
     <td><%= link_to 'Edit', edit_lunch_path(lunch) %></td>
     <td><%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %></td>
   </tr>
