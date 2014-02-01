@@ -1,12 +1,14 @@
 <h1>Today's lunches</h1>
 
+<%= link_to 'New Lunch', new_lunch_path %>
+
 <div class="lunches">
 <% @lunches.each do |lunch| %>
   <div class="lunch">
     <div class="info">
       <h2 class="restaurant"><%= lunch.where %></h2>
       <span class="when"><%= lunch.when.strftime("%H:%M") %></span>
-      <%= link_to 'Edit', edit_lunch_path(lunch) %>
+      <%= link_to '', edit_lunch_path(lunch) %>
     </div>
     <div class="users">
       <% lunch.users.each do |user| %>
@@ -15,9 +17,8 @@
            <div class="name"><%= user.name %></div>
          </div>
       <% end %>
-      <%= button_to '+', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
+      <%= button_to '', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
     </div>
   </div>
 <% end %>
 </div>
-<%= link_to 'New Lunch', new_lunch_path %>

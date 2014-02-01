@@ -5,16 +5,16 @@
   <%= stylesheet_link_tag "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-    <header id="user-widget">
-        <% if current_user %>
-          <div class="current-user">
-            <div class="thumbnail" style="background-image: url(http://graph.facebook.com/<%=current_user.uid%>/picture?type=normal);"></div>
-            <%= link_to "Sign out", signout_path, id: "sign_out" %>
-          </div>
-        <% else %>
-          <%= link_to "Sign in", "/auth/facebook", id: "sign_in" %>
-        <% end %>
+<body class="<% if current_user %>signed-in<% end %>">
+    <header id="user-widget" >
+            <% if current_user %>
+                <div class="current-user">
+                    <div class="thumbnail" style="background-image: url(http://graph.facebook.com/<%=current_user.uid%>/picture?type=normal);"></div>
+                    <%= link_to "", signout_path, class: "btn-sign-out" %>
+                </div>
+            <% else %>
+                <%= link_to "", "/auth/facebook", class: "btn-sign-in" %>
+            <% end %>
     </header>
 <%= yield %>
 </body>

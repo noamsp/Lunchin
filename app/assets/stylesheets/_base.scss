@@ -22,9 +22,9 @@ header {
   top: 0; left: 0;
   overflow: hidden;
   height: 60px; width: 100%;
-  padding: 0 20px;
   box-sizing: border-box;
-  background-color: #222;
+  background-color: #fcfcfc;
+  border-bottom: solid 1px #ddd;
   color: #fff;
   text-align: right;
   -webkit-perspective: 1000px; // for flipping cube animation
@@ -32,6 +32,7 @@ header {
     position: relative;
     display: inline-block;
     height: 60px; width: 60px;
+    left: -30px; // TODO hack, fix this
     transition: -webkit-transform 300ms;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -40,26 +41,25 @@ header {
       -webkit-transform: rotateX(89deg);
       transform: rotateX(89deg); /* Text bleed at 90º */
     }
-    .thumbnail, a {
+    .thumbnail, .btn-sign-out {
       height: 60px; width: 60px;
     }
     .thumbnail {
-      margin-left: -30px; // TODO hack, fix this
       -webkit-transform: translateZ(50px);
       transform: translateZ(50px);
     }
-    a {
+    .btn-sign-out {
       display: block;
-      background: $lightGrey;
-      color: #222;
-      padding: 5px;
-      line-height: 50px; // position text in the middle
-      box-sizing: border-box;
-      text-align: center;
+      margin-left: 30px;
       -webkit-transform: rotateX(-90deg) translateZ(-50px);
       transform: rotateX(-90deg) translateZ(-50px);
-      text-decoration: none;
+      background: $lightGrey url(icon/sign-out.png) center center no-repeat;
     }
+  }
+  .btn-sign-in {
+    display: inline-block;
+    height: 60px; width: 60px;
+    background: $lightGrey url(icon/sign-out.png) center center no-repeat;
   }
 }
 
@@ -70,4 +70,11 @@ h1 {
 .thumbnail {
   background: no-repeat center center; // image applied inline from facebook
   background-size: cover;
+}
+
+%button {
+  border: solid 1px #888;
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover { border-color: #666; }
 }

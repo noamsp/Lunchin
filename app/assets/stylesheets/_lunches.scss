@@ -5,7 +5,7 @@
   position: relative;
   display: inline-block;
   height: 100%;
-  margin: 0 40px 40px 0;
+  margin: 0 70px 70px 0;
   box-sizing: border-box;
   .info {
     height: 30px;
@@ -14,9 +14,16 @@
     .restaurant {
       display: inline-block;
       margin: 0;
+      text-transform: capitalize;
     }
     a { // edit link
-
+      display: inline-block;
+      vertical-align: middle;
+      height: 16px;
+      width: 16px;
+      background: $lightGrey url(icon/pen.svg) center center no-repeat;
+      background-size: 70%;
+      @extend %button;
     }
   }
   .users {
@@ -28,10 +35,11 @@
       vertical-align: middle;
       position: relative;
       width: 100px; height: 100px;
+      margin-right: -5px;
       transition: -webkit-transform 300ms;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
-      &:last-of-type { margin-right: 0; }
+      border: solid 1px #888;
       &:hover {
         -webkit-transform: rotateX(89deg);
         transform: rotateX(89deg); /* Text bleed at 90º */
@@ -52,7 +60,6 @@
         -webkit-transform: rotateX(-90deg) translateZ(-50px);
         transform: rotateX(-90deg) translateZ(-50px);
         background: linear-gradient(-45deg, #5cbe73 1%, #182b04 100%);
-        border: 3px solid #DDFFE2;
         &:first-letter { font-size: 3.5em; }
       }
     }
@@ -61,15 +68,15 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    height: 100px; width: 100px;
+    height: 106px; width: 106px;
     box-sizing: border-box;
     input {
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 0;
-      width: 100%;
+      height: 106px; width: 106px;
       font-size: 5em;
-      cursor: pointer;
+      @extend %button;
+      border-radius: 0;
+      background: $lightGrey url(icon/add-person.svg) center center no-repeat;
+      background-size: 70%;
     }
   }
 }
