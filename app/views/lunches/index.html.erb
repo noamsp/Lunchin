@@ -5,16 +5,17 @@
   <div class="lunch">
     <div class="info">
       <h2 class="restaurant"><%= lunch.where %></h2>
-      <span class="when"><%= lunch.when %></span>
+      <span class="when"><%= lunch.when.strftime("%H:%M") %></span>
       <%= link_to 'Edit', edit_lunch_path(lunch) %>
-      <%= button_to 'Join', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
     </div>
     <div class="users">
       <% lunch.users.each do |user| %>
-         <div class="user" style="background-image: url(http://graph.facebook.com/<%=user.uid%>/picture?type=square);">
-           <span class="name"><%= user.name %></span>
+         <div class="user">
+           <div class="thumbnail" style="background-image: url(http://graph.facebook.com/<%=user.uid%>/picture?type=large);"></div>
+           <div class="name"><%= user.name %></div>
          </div>
       <% end %>
+      <%= button_to '+', join_lunch_path(lunch), method: :post, data: {confirm: 'Really Join?'} %>
     </div>
   </div>
 <% end %>

@@ -1,0 +1,75 @@
+.lunches {
+  padding: 20px; // padding-bottom is created by margin on .lunch
+}
+.lunch {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  margin: 0 40px 40px 0;
+  box-sizing: border-box;
+  .info {
+    height: 30px;
+    min-width: 150px;
+    box-sizing: border-box;
+    .restaurant {
+      display: inline-block;
+      margin: 0;
+    }
+    a { // edit link
+
+    }
+  }
+  .users {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-perspective: 1000px; // for flipping cube animation
+    .user {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 100px; height: 100px;
+      transition: -webkit-transform 300ms;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      &:last-of-type { margin-right: 0; }
+      &:hover {
+        -webkit-transform: rotateX(89deg);
+        transform: rotateX(89deg); /* Text bleed at 90º */
+      }
+      .thumbnail, .name {
+        height: 100px; width: 100px;
+        color: #fafffb;
+        padding: 25px 25px 25px 30px;
+        box-sizing: border-box;
+      }
+      .thumbnail {  // flipety
+        position: relative;
+        -webkit-transform: translateZ(50px);
+        transform: translateZ(50px);
+      }
+      .name { // flop
+        padding: 0 5px;
+        -webkit-transform: rotateX(-90deg) translateZ(-50px);
+        transform: rotateX(-90deg) translateZ(-50px);
+        background: linear-gradient(-45deg, #5cbe73 1%, #182b04 100%);
+        border: 3px solid #DDFFE2;
+        &:first-letter { font-size: 3.5em; }
+      }
+    }
+  }
+  .button_to { // join button
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    height: 100px; width: 100px;
+    box-sizing: border-box;
+    input {
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0;
+      width: 100%;
+      font-size: 5em;
+      cursor: pointer;
+    }
+  }
+}

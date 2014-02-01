@@ -1,7 +1,6 @@
 class LunchesController < ApplicationController
   # GET /lunches
   # GET /lunches.json
-  
   def index
     @lunches = Lunch.all
 
@@ -53,8 +52,6 @@ class LunchesController < ApplicationController
 
 
     @lunch.users << current_user
-
-
 
     respond_to do |format|
       if @lunch.save

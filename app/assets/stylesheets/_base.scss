@@ -1,0 +1,73 @@
+// Colors
+$lightGrey: #f1f1f1;
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,700);
+
+$arial: Arial, Helvetica, sans-serif;
+$ubuntu: 'Ubuntu', sans-serif;
+@mixin googleFontFamily($family: $ubuntu, $weight: 300) {
+  font-family: $family;
+  font-weight: $weight;
+}
+
+body {
+  margin: 0;
+  padding: 60px 0 0; // make space for fixed position header
+  @include googleFontFamily();
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0;
+  overflow: hidden;
+  height: 60px; width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: #222;
+  color: #fff;
+  text-align: right;
+  -webkit-perspective: 1000px; // for flipping cube animation
+  .current-user {
+    position: relative;
+    display: inline-block;
+    height: 60px; width: 60px;
+    transition: -webkit-transform 300ms;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    &:hover {
+      -webkit-transform: rotateX(89deg);
+      transform: rotateX(89deg); /* Text bleed at 90º */
+    }
+    .thumbnail, a {
+      height: 60px; width: 60px;
+    }
+    .thumbnail {
+      margin-left: -30px; // TODO hack, fix this
+      -webkit-transform: translateZ(50px);
+      transform: translateZ(50px);
+    }
+    a {
+      display: block;
+      background: $lightGrey;
+      color: #222;
+      padding: 5px;
+      line-height: 50px; // position text in the middle
+      box-sizing: border-box;
+      text-align: center;
+      -webkit-transform: rotateX(-90deg) translateZ(-50px);
+      transform: rotateX(-90deg) translateZ(-50px);
+      text-decoration: none;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.thumbnail {
+  background: no-repeat center center; // image applied inline from facebook
+  background-size: cover;
+}

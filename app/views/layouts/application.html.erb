@@ -8,10 +8,10 @@
 <body>
     <header id="user-widget">
         <% if current_user %>
-          <strong><%= current_user.name %></strong>
-          <img src="http://graph.facebook.com/<%=current_user.uid%>/picture?type=square" />
-          <%# type can be small, square, large, normal %>
-          <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          <div class="current-user">
+            <div class="thumbnail" style="background-image: url(http://graph.facebook.com/<%=current_user.uid%>/picture?type=normal);"></div>
+            <%= link_to "Sign out", signout_path, id: "sign_out" %>
+          </div>
         <% else %>
           <%= link_to "Sign in", "/auth/facebook", id: "sign_in" %>
         <% end %>
